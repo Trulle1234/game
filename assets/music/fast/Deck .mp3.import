@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwi3floamhsws"
+path="res://.godot/imported/Deck .mp3-46c121391f9ff343c07a194da7db4b83.mp3str"
+
+[deps]
+
+source_file="res://assets/music/fast/Deck .mp3"
+dest_files=["res://.godot/imported/Deck .mp3-46c121391f9ff343c07a194da7db4b83.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

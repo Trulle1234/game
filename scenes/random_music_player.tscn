@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs1ectney46lm"]
+
+[ext_resource type="Script" uid="uid://b3ag2xrg1wo7f" path="res://scripts/random_music_player.gd" id="1_oknps"]
+
+[node name="RandomMusicPlayer" type="AudioStreamPlayer2D"]
+bus = &"Music"
+script = ExtResource("1_oknps")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
