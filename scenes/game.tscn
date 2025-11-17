@@ -362,10 +362,12 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Parallax" type="Node2D" parent="."]
+position = Vector2(0, -13)
 
 [node name="Parallax2D1" type="Parallax2D" parent="Parallax"]
 scroll_scale = Vector2(0.1, 0)
-repeat_size = Vector2(288, 0)
+scroll_offset = Vector2(45, 6)
+repeat_size = Vector2(288, 208)
 repeat_times = 3
 
 [node name="Mountain" type="Sprite2D" parent="Parallax/Parallax2D1"]
@@ -373,8 +375,8 @@ position = Vector2(-17, -16)
 texture = ExtResource("7_37s47")
 
 [node name="Parallax2D2" type="Parallax2D" parent="Parallax"]
-scroll_scale = Vector2(0.5, 0)
-repeat_size = Vector2(288, 0)
+scroll_scale = Vector2(0.2, 0)
+repeat_size = Vector2(288, 208)
 repeat_times = 3
 
 [node name="Mid" type="Sprite2D" parent="Parallax/Parallax2D2"]
@@ -382,8 +384,8 @@ position = Vector2(-17, -16)
 texture = ExtResource("6_5newe")
 
 [node name="Parallax2D3" type="Parallax2D" parent="Parallax"]
-scroll_scale = Vector2(0.7, 0)
-repeat_size = Vector2(288, 0)
+scroll_scale = Vector2(0.35, 0)
+repeat_size = Vector2(288, 208)
 repeat_times = 3
 
 [node name="Trees" type="Sprite2D" parent="Parallax/Parallax2D3"]
@@ -393,10 +395,6 @@ texture = ExtResource("5_1kice")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_js0lu")
 format = 2
-
-[node name="Back" type="TileMapLayer" parent="TileMap"]
-use_parent_material = true
-tile_set = SubResource("TileSet_js0lu")
 
 [node name="Mid" type="TileMapLayer" parent="TileMap"]
 use_parent_material = true
