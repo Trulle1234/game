@@ -362,8 +362,8 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-offset = Vector2(288, -521)
-transform = Transform2D(1, 0, 0, 1, 288, -521)
+offset = Vector2(288, -585)
+transform = Transform2D(1, 0, 0, 1, 288, -585)
 
 [node name="Mountain1" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.9, 1)
@@ -401,6 +401,7 @@ texture = ExtResource("7_37s47")
 centered = false
 
 [node name="Mid1" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, 8)
 motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(1152, 0)
 
@@ -409,7 +410,7 @@ texture = ExtResource("6_5newe")
 centered = false
 
 [node name="Mid2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(288, 0)
+position = Vector2(288, 8)
 motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(1152, 0)
 
@@ -418,7 +419,7 @@ texture = ExtResource("6_5newe")
 centered = false
 
 [node name="Mid3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(576, 0)
+position = Vector2(576, 8)
 motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(1152, 0)
 
@@ -427,7 +428,7 @@ texture = ExtResource("6_5newe")
 centered = false
 
 [node name="Mid4" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(864, 0)
+position = Vector2(864, 8)
 motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(1152, 0)
 
@@ -436,6 +437,7 @@ texture = ExtResource("6_5newe")
 centered = false
 
 [node name="Trees1" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, 16)
 motion_scale = Vector2(0.75, 1)
 motion_mirroring = Vector2(1152, 0)
 
@@ -444,7 +446,7 @@ texture = ExtResource("5_1kice")
 centered = false
 
 [node name="Trees2" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(288, 0)
+position = Vector2(288, 16)
 motion_scale = Vector2(0.75, 1)
 motion_mirroring = Vector2(1152, 0)
 
@@ -453,7 +455,7 @@ texture = ExtResource("5_1kice")
 centered = false
 
 [node name="Trees3" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(576, 0)
+position = Vector2(576, 16)
 motion_scale = Vector2(0.75, 1)
 motion_mirroring = Vector2(1152, 0)
 
@@ -462,7 +464,7 @@ texture = ExtResource("5_1kice")
 centered = false
 
 [node name="Trees4" type="ParallaxLayer" parent="ParallaxBackground"]
-position = Vector2(864, 0)
+position = Vector2(864, 16)
 motion_scale = Vector2(0.75, 1)
 motion_mirroring = Vector2(1152, 0)
 
