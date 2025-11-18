@@ -362,34 +362,33 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Parallax" type="Node2D" parent="."]
-position = Vector2(0, -13)
+position = Vector2(0, -30)
 
-[node name="Parallax2D1" type="Parallax2D" parent="Parallax"]
-scroll_scale = Vector2(0.1, 0)
-scroll_offset = Vector2(45, 6)
-repeat_size = Vector2(288, 208)
-repeat_times = 3
+[node name="Parallax2D" type="Parallax2D" parent="Parallax"]
+texture_filter = 1
+scroll_scale = Vector2(0.05, 1)
+repeat_size = Vector2(288, 0)
+repeat_times = 8
 
-[node name="Mountain" type="Sprite2D" parent="Parallax/Parallax2D1"]
-position = Vector2(-17, -16)
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Parallax2D"]
 texture = ExtResource("7_37s47")
 
 [node name="Parallax2D2" type="Parallax2D" parent="Parallax"]
-scroll_scale = Vector2(0.2, 0)
-repeat_size = Vector2(288, 208)
-repeat_times = 3
+texture_filter = 1
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(288, 0)
+repeat_times = 8
 
-[node name="Mid" type="Sprite2D" parent="Parallax/Parallax2D2"]
-position = Vector2(-17, -16)
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Parallax2D2"]
 texture = ExtResource("6_5newe")
 
 [node name="Parallax2D3" type="Parallax2D" parent="Parallax"]
-scroll_scale = Vector2(0.35, 0)
-repeat_size = Vector2(288, 208)
-repeat_times = 3
+texture_filter = 1
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(288, 0)
+repeat_times = 8
 
-[node name="Trees" type="Sprite2D" parent="Parallax/Parallax2D3"]
-position = Vector2(-17, -16)
+[node name="Sprite2D" type="Sprite2D" parent="Parallax/Parallax2D3"]
 texture = ExtResource("5_1kice")
 
 [node name="TileMap" type="TileMap" parent="."]
