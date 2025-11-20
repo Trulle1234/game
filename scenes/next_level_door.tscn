@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8f5yjbjgkfn3"]
+[gd_scene load_steps=8 format=3 uid="uid://b8f5yjbjgkfn3"]
 
 [ext_resource type="Script" uid="uid://c4smng1lf8iep" path="res://scripts/next_level_door.gd" id="1_yphqt"]
 [ext_resource type="Texture2D" uid="uid://csjnpoyr5vkke" path="res://assets/sprites/misc/Doors.png" id="2_1qxk8"]
+[ext_resource type="AudioStream" uid="uid://baf74suohydig" path="res://assets/sfx/door_slam.wav" id="3_1qxk8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yphqt"]
 atlas = ExtResource("2_1qxk8")
@@ -49,6 +50,10 @@ position = Vector2(0, -15)
 shape = SubResource("RectangleShape2D_cutrx")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1qxk8")
+bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

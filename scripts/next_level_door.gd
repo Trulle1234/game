@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var timer: Timer = $Timer
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var next_level_path = ""
 
@@ -16,6 +17,7 @@ func _on_body_entered(body: Node2D) -> void:
 	body.is_dead = true
 	body.velocity.x = 0
 	animated_sprite.play("closed")
+	audio_player.play()
 	body.get_node("AnimatedSprite2D").play("invis")
 	timer.start()
 

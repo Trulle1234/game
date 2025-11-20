@@ -463,6 +463,7 @@ tile_map_data = PackedByteArray("AADk/wQACgAAAAAAAADk/wUACgAAAAEAAADl/wQACgABAAA
 tile_set = SubResource("TileSet_js0lu")
 
 [node name="Player" parent="." instance=ExtResource("18_dp4fg")]
+position = Vector2(2, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, -13)
@@ -544,9 +545,6 @@ position = Vector2(1128, -72)
 
 [node name="Coin22" parent="Conis" instance=ExtResource("20_2to4m")]
 position = Vector2(1192, -56)
-
-[node name="Coin23" parent="Conis" instance=ExtResource("20_2to4m")]
-position = Vector2(1240, -72)
 
 [node name="Coin24" parent="Conis" instance=ExtResource("20_2to4m")]
 position = Vector2(1288, -88)

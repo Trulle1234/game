@@ -421,6 +421,7 @@ tile_map_data = PackedByteArray("AAD9/wAAAgAJAAQAAAD+/wAAAgAJAAQAAAD//wAAAgAJAAQ
 tile_set = SubResource("TileSet_bnt33")
 
 [node name="Player" parent="." instance=ExtResource("18_yqg3d")]
+position = Vector2(8, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, -13)
@@ -444,8 +445,8 @@ shape = SubResource("WorldBoundaryShape2D_em1wd")
 [node name="NextLevelDoor" parent="." instance=ExtResource("23_6nfno")]
 position = Vector2(64, 0)
 
-[node name="EntrenceDoor" type="Sprite2D" parent="NextLevelDoor"]
-position = Vector2(-73, -33)
+[node name="EntrenceDoor" type="Sprite2D" parent="."]
+position = Vector2(-9, -33)
 texture = ExtResource("21_lkn2k")
 centered = false
 region_enabled = true
