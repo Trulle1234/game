@@ -38,7 +38,7 @@ theme_override_fonts/font = ExtResource("2_yev5y")
 theme_override_font_sizes/font_size = 64
 text = "0"
 
-[node name="Sprite2D" type="Sprite2D" parent="Control/MarginContainer"]
+[node name="Coin" type="Sprite2D" parent="Control/MarginContainer"]
 position = Vector2(49, 60)
 scale = Vector2(3.75, 3.75)
 texture = ExtResource("3_yev5y")

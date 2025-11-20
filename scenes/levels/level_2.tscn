@@ -284,8 +284,7 @@ sources/12 = SubResource("TileSetAtlasSource_b1k63")
 sources/13 = SubResource("TileSetAtlasSource_holbn")
 sources/14 = SubResource("TileSetAtlasSource_px4x2")
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lkn2k"]
-distance = 65.0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_em1wd"]
 
 [node name="Level2" type="Node2D"]
 
@@ -435,7 +434,7 @@ position_smoothing_enabled = true
 position = Vector2(0, 141)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-shape = SubResource("WorldBoundaryShape2D_lkn2k")
+shape = SubResource("WorldBoundaryShape2D_em1wd")
 
 [node name="Conis" type="Node" parent="."]
 
