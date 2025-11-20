@@ -288,6 +288,7 @@ sources/13 = SubResource("TileSetAtlasSource_i3rdk")
 sources/14 = SubResource("TileSetAtlasSource_yvv08")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ca42v"]
+distance = 65.0
 
 [sub_resource type="Animation" id="Animation_37s47"]
 resource_name = "platform1_move"
