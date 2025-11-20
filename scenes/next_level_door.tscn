@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8f5yjbjgkfn3"]
+
+[ext_resource type="Script" uid="uid://c4smng1lf8iep" path="res://scripts/next_level_door.gd" id="1_yphqt"]
+[ext_resource type="Texture2D" uid="uid://csjnpoyr5vkke" path="res://assets/sprites/misc/Doors.png" id="2_1qxk8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yphqt"]
+atlas = ExtResource("2_1qxk8")
+region = Rect2(0, 0, 32, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qxk8"]
+atlas = ExtResource("2_1qxk8")
+region = Rect2(32, 0, 32, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cutrx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yphqt")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qxk8")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cutrx"]
+size = Vector2(18, 30)
+
+[node name="NextLevelDoor" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_yphqt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-16, -33)
+sprite_frames = SubResource("SpriteFrames_cutrx")
+animation = &"open"
+autoplay = "open"
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_cutrx")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

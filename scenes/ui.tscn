@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqlcynhf1g6vh"]
 
-[ext_resource type="Script" uid="uid://bfock3cqvueml" path="res://ui.gd" id="1_x4jx1"]
+[ext_resource type="Script" uid="uid://bfock3cqvueml" path="res://scripts/ui.gd" id="1_x4jx1"]
 [ext_resource type="FontFile" uid="uid://bq3dja3cmv766" path="res://assets/fonts/monogram-extended.ttf" id="2_yev5y"]
 [ext_resource type="Texture2D" uid="uid://dn7sun784b13t" path="res://assets/sprites/misc/Coin.png" id="3_yev5y"]
 

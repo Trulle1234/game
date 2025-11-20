@@ -23,6 +23,10 @@ RandomMusicPlayer="*res://scenes/random_music_player.tscn"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[global_group]
+
+Player=""
+
 [input]
 
 jump={
