@@ -1,8 +1,12 @@
 extends CharacterBody2D
 
-const SPEED = 130.0
+const BASE_SPEED = 130.0
+const CROUCH_SPEED = 1.0
 const JUMP_VELOCITY = -300.0
 const GRAVITY = Vector2(0, 980.0)
+
+
+var speed = BASE_SPEED
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -26,23 +30,38 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.flip_h = true
 		
 		if is_on_floor():
-			if direction == 0:
-				animated_sprite.play("idle")
+			if Input.is_action_pressed("crouch"):
+				animated_sprite.play("crouch")
+				
+				speed = CROUCH_SPEED
+				position.y += 1
+				
 			else:
-				animated_sprite.play("run")
+				speed = BASE_SPEED
+				
+				if direction == 0:
+					animated_sprite.play("idle")
+				
+				else:
+					animated_sprite.play("run")
 			
 			if coyote_time_active:
 				coyote_time_active = false
 				coyote_timer.stop()
-		elif not is_on_floor():
-			animated_sprite.play("jump")
-			if not coyote_time_active:
-				coyote_timer.start()
-				coyote_time_active = true
+		else:
+			if Input.is_action_pressed("crouch"):
+				animated_sprite.play("crouch")
 				
+				speed = CROUCH_SPEED
+				position.y += 1
+			else:
+				if not coyote_time_active:
+					coyote_timer.start()
+					coyote_time_active = true
+				animated_sprite.play("jump")
+		
 		if Input.is_action_just_pressed("jump"):
 			jump_buffer_timer.start()
-
 			
 		if not jump_buffer_timer.is_stopped() and (not coyote_timer.is_stopped() or is_on_floor()):
 			velocity.y = JUMP_VELOCITY
@@ -50,8 +69,8 @@ func _physics_process(delta: float) -> void:
 			coyote_time_active = true
 			
 		if direction:
-			velocity.x = direction * SPEED
+			velocity.x = direction * speed
 		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
+			velocity.x = move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
