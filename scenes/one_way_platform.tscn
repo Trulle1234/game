@@ -1,19 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvah5ho4hpoic"]
+[gd_scene load_steps=4 format=3 uid="uid://cvah5ho4hpoic"]
 
-[ext_resource type="Texture2D" uid="uid://d264rdogjq1bd" path="res://assets/sprites/misc/Blocks (16 x 16).png" id="1_qgauu"]
+[ext_resource type="Texture2D" uid="uid://cqh2je6db0mpl" path="res://assets/sprites/misc/Blocks (16 x 16).png" id="1_qgauu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wt31i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlgqw"]
 size = Vector2(32, 8)
 
 [node name="OneWayPlatform" type="AnimatableBody2D"]
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D1" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_wt31i")
 position = Vector2(16, 0)
 texture = ExtResource("1_qgauu")
 region_enabled = true
 region_rect = Rect2(64, 48, 16, 9)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="."]
 texture = ExtResource("1_qgauu")
 region_enabled = true
 region_rect = Rect2(64, 48, 16, 9)
