@@ -554,7 +554,7 @@ position = Vector2(200, -40)
 position = Vector2(264, -40)
 
 [node name="Coin11" parent="Conis" instance=ExtResource("20_5niy6")]
-position = Vector2(264, -56)
+position = Vector2(264, -72)
 
 [node name="Platforms" type="Node" parent="."]
 
